@@ -54,7 +54,7 @@
 		data-click="attention-step-title"
 	>
 		<div class="w-max">
-			<TextbookTooltip id="self-attention">Multi-head Self Attention</TextbookTooltip>
+			<TextbookTooltip id="self-attention">Multi-head Self Attention (الانتباه الذاتي)</TextbookTooltip>
 		</div>
 	</div>
 	<div class="content relative">
@@ -71,7 +71,12 @@
 				>
 					<div class="qkv flex h-full flex-col justify-center gap-[5rem] pl-[6rem]">
 						<div class="column key">
-							<div class="head1 title"><TextbookTooltip id="qkv">Key</TextbookTooltip></div>
+							<div class="head1 title text-center">
+								<TextbookTooltip id="qkv">
+									<div class="font-semibold text-xs leading-none">Key</div>
+									<div class="text-[0.62rem] font-normal leading-tight opacity-90">(المفتاح)</div>
+								</TextbookTooltip>
+							</div>
 
 							{#each $tokens as token, index}
 								<div
@@ -84,12 +89,17 @@
 								</div>
 							{/each}
 							<Tooltip class="popover" triggeredBy={'.step.attention .key .cell'} placement="right"
-								>Key, Head {$attentionHeadIdx + 1}, vector({$modelMeta.dimension /
+								>Key (المفتاح), Head {$attentionHeadIdx + 1}, vector({$modelMeta.dimension /
 									$modelMeta.attention_head_num})</Tooltip
 							>
 						</div>
 						<div class="column query">
-							<div class="head1 title"><TextbookTooltip id="qkv">Query</TextbookTooltip></div>
+							<div class="head1 title text-center">
+								<TextbookTooltip id="qkv">
+									<div class="font-semibold text-xs leading-none">Query</div>
+									<div class="text-[0.62rem] font-normal leading-tight opacity-90">(الاستعلام)</div>
+								</TextbookTooltip>
+							</div>
 							{#each $tokens as token, index}
 								<div
 									class="head1 cell x1-12 query text-xs"
@@ -104,12 +114,17 @@
 								class="popover"
 								triggeredBy={'.step.attention .query .cell'}
 								placement="right"
-								>Query, Head {$attentionHeadIdx + 1}, vector({$modelMeta.dimension /
+								>Query (الاستعلام), Head {$attentionHeadIdx + 1}, vector({$modelMeta.dimension /
 									$modelMeta.attention_head_num})</Tooltip
 							>
 						</div>
 						<div class="column value">
-							<div class="head1 title"><TextbookTooltip id="qkv">Value</TextbookTooltip></div>
+							<div class="head1 title text-center">
+								<TextbookTooltip id="qkv">
+									<div class="font-semibold text-xs leading-none">Value</div>
+									<div class="text-[0.62rem] font-normal leading-tight opacity-90">(القيمة)</div>
+								</TextbookTooltip>
+							</div>
 							{#each $tokens as token, index}
 								<div class="head1 cell x1-12 text-xs" class:last={index === $tokens.length - 1}>
 									<span class="label float">{token}</span>
@@ -120,7 +135,7 @@
 								class="popover"
 								triggeredBy={'.step.attention .value .cell'}
 								placement="right"
-								>Value, Head {$attentionHeadIdx + 1}, vector({$modelMeta.dimension /
+								>Value (القيمة), Head {$attentionHeadIdx + 1}, vector({$modelMeta.dimension /
 									$modelMeta.attention_head_num})</Tooltip
 							>
 						</div>
@@ -130,8 +145,11 @@
 					</div>
 					<div class="head-out mx-[2rem]">
 						<div class="column out">
-							<div class="head1 title">
-								<TextbookTooltip id="output-concatenation">Out</TextbookTooltip>
+							<div class="head1 title text-center">
+								<TextbookTooltip id="output-concatenation">
+									<div class="font-semibold text-xs leading-none">Out</div>
+									<div class="text-[0.62rem] font-normal leading-tight opacity-90">(المخرج)</div>
+								</TextbookTooltip>
 							</div>
 							{#each $tokens as token, index}
 								<div class="head1 cell x1-12" class:last={index === $tokens.length - 1}>
@@ -139,7 +157,7 @@
 								</div>
 							{/each}
 							<Tooltip class="popover" triggeredBy={'.step.attention .out .cell'} placement="right"
-								>Attention Out, Head 1, vector({$modelMeta.dimension /
+								>Attention Out (مخرج الانتباه), Head 1, vector({$modelMeta.dimension /
 									$modelMeta.attention_head_num})</Tooltip
 							>
 						</div>
@@ -184,11 +202,12 @@
 			.title {
 				z-index: $COLUMN_TITLE_INDEX;
 				position: absolute;
-				top: -1.7rem;
+				top: -2.3rem;
 				left: 50%;
 				transform: translateX(-50%);
 				font-size: 0.9rem;
 				transition: none;
+				white-space: nowrap;
 			}
 			&.query .title {
 				color: theme('colors.blue.400');

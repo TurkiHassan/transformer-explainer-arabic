@@ -36,7 +36,7 @@
 				<!-- <svg>
 					<path d="M0,0 Q0,-16 30,-16"></path>
 				</svg> -->
-				<div class="guide-text gelu-text">GeLU</div>
+				<div class="guide-text gelu-text">GeLU (تنشيط)</div>
 			</div>
 		{/if}
 	</div>
@@ -50,12 +50,9 @@
 		{#if tail}
 			<div class="guide">
 				<svg width="20px">
-					<!-- <path
-						d="M44.3186 4.46399C44.5314 4.28801 44.5613 3.97284 44.3853 3.76004L41.5175 0.292199C41.3416 0.0793953 41.0264 0.0495441 40.8136 0.225525C40.6008 0.401505 40.5709 0.716677 40.7469 0.929481L43.296 4.012L40.2135 6.56113C40.0007 6.73711 39.9709 7.05228 40.1468 7.26509C40.3228 7.47789 40.638 7.50774 40.8508 7.33176L44.3186 4.46399ZM44.0471 3.58091C38.7621 3.08034 27.8926 4.80481 18.3357 11.5838C8.74613 18.386 0.5 30.2626 0.5 50H1.5C1.5 30.5889 9.58721 19.0154 18.9143 12.3994C28.2741 5.76023 38.9045 4.0983 43.9529 4.57645L44.0471 3.58091Z"
-					/> -->
 					<path d="M0,50 Q0,0 24,0"></path>
 				</svg>
-				<div class="guide-text dropout-text">Dropout</div>
+				<div class="guide-text dropout-text">Dropout (إسقاط)</div>
 			</div>
 		{/if}
 	</div>
@@ -76,12 +73,9 @@
 		{#if tail}
 			<div class="guide">
 				<svg width="20px">
-					<!-- <path
-						d="M27.3536 4.35355C27.5488 4.15829 27.5488 3.84171 27.3536 3.64645L24.1716 0.46447C23.9763 0.269208 23.6597 0.269208 23.4645 0.464471C23.2692 0.659733 23.2692 0.976316 23.4645 1.17158L26.2929 4L23.4645 6.82843C23.2692 7.02369 23.2692 7.34028 23.4645 7.53554C23.6597 7.7308 23.9763 7.7308 24.1716 7.53554L27.3536 4.35355ZM27 3.5C20.3125 3.50001 15.2969 6.63952 11.5638 11.7944C7.84616 16.9278 5.39057 24.0677 3.75991 32.1346C0.498061 48.2711 0.5 68.3247 0.5 84H1.5C1.5 68.2984 1.50194 48.352 4.74009 32.3328C6.35943 24.3218 8.77884 17.3448 12.3737 12.3809C15.9531 7.4384 20.6875 4.50001 27 4.5V3.5Z"
-					/> -->
 					<path d="M0,50 Q0,0 24,0"></path>
 				</svg>
-				<div class="guide-text ln-text">Layer Normalization</div>
+				<div class="guide-text ln-text">Layer Normalization (تطبيع)</div>
 			</div>
 		{/if}
 	</div>
@@ -89,7 +83,7 @@
 	<div class={classNames(`residual residual-start cell`, className)} class:active>
 		<div class="cursor"></div>
 		{#if head}
-			<div class="guide-text residual-text">Residual</div>
+			<div class="guide-text residual-text">Residual (تخطي)</div>
 		{/if}
 		<svg class="main">
 			{#if head}<path {id} class="head" d="M0,0 Q0,-16 30,-16"></path>{/if}

@@ -308,7 +308,7 @@
 	// };
 </script>
 
-<WeightPopoverCard id="qkv" title={'Query Key Value'} bind:isAnimationActive {timeline}>
+<WeightPopoverCard id="qkv" title={'Q·K·V (الاستعلام والمفتاح والقيمة)'} bind:isAnimationActive {timeline}>
 	<div class="weight-popover-content flex items-center justify-start">
 		<div class="matrix flex flex-col items-center">
 			<div class="tokens" style={`gap:${tokenGap}px`}>
@@ -319,8 +319,8 @@
 		</div>
 		<div class="matrix flex flex-col items-center">
 			<div class="title flex items-center gap-1 self-end">
-				Embeddings<HelpPopover id="qkv-emgeddings" 
-					>{`Embeddings originate from tokens \nbut evolve through blocks, becoming \nabstract representations.`}</HelpPopover
+				Embeddings (تضمين)<HelpPopover id="qkv-emgeddings" 
+					>{`تبدأ التضمينات من الرموز \nثم تتطور عبر الكتل لتصبح \nتمثيلات سياقية مجردة.`}</HelpPopover
 				>
 			</div>
 			<!-- (tokenLen, 768) -->
@@ -339,8 +339,8 @@
 		<div class="operator"><div class="symbol mul">&times;</div></div>
 		<div class="matrix flex flex-col items-center">
 			<div class="title flex items-center gap-1">
-				Q·K·V Weights<HelpPopover id="qkv-weights" 
-					>{`Transforms embedding vectors into Query, Key, and Value vectors. \nParameters were learned in training, fixed in prediction.`}</HelpPopover
+				أوزان Q·K·V Weights<HelpPopover id="qkv-weights" 
+					>{`تحوّل متجهات التضمين إلى متجهات استعلام، مفتاح، وقيمة. \nمعاملات تعلّمها النموذج في التدريب وتظل ثابتة في التوليد.`}</HelpPopover
 				>
 			</div>
 			<div class="flex gap-0">
@@ -362,8 +362,8 @@
 		<div class="operator"><div class="symbol plus">+</div></div>
 		<div class="matrix flex flex-col items-center">
 			<div class="title flex items-center gap-1">
-				Q·K·V Bias<HelpPopover id="qkv-bias" 
-					>{`Offsets added after transformation. \nParameters that learned in training, fixed in prediction.`}</HelpPopover
+				انحياز Q·K·V Bias<HelpPopover id="qkv-bias" 
+					>{`إزاحات انحياز تُضاف بعد التحويل الخطي. \nمعاملات تعلّمها النموذج في التدريب وتظل ثابتة في التوليد.`}</HelpPopover
 				>
 			</div>
 			<Matrix

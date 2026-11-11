@@ -211,7 +211,7 @@
 		data-click="prob-step-title"
 	>
 		<div class="title-text flex w-max items-center gap-1">
-			Probabilities
+			Probabilities (الاحتمالات)
 			<ZoomInOutline></ZoomInOutline>
 		</div>
 	</div>
@@ -235,7 +235,7 @@
 					>
 						<span>{item.token.trim() === '' ? '\u00A0' : item.token}</span>
 						<Tooltip class="softmax-tooltip" type="light">
-							Token ID: <span class="number">{tokenIds[idx]}</span>
+							معرّف الرمز Token ID: <span class="number">{tokenIds[idx]}</span>
 						</Tooltip>
 					</div>
 				{/each}
@@ -247,7 +247,7 @@
 			{#if isSoftmaxExpanded}
 				<div class="softmax-subtitle softmax-detail flex text-center text-xs opacity-0">
 					<div class="title-box token-string !justify-end">
-						<div class="title-text">Tokens</div>
+						<div class="title-text">Tokens (الرموز)</div>
 					</div>
 					<div class="title-box logits">
 						<div
@@ -255,24 +255,24 @@
 							on:click={onClickLogits}
 							data-click="prob-expansion-logit-btn"
 						>
-							Logits <EyeOutline class="icon text-gray-400" size="sm" />
+							Logits (اللوجيتس) <EyeOutline class="icon text-gray-400" size="sm" />
 						</div>
 					</div>
 					<div class="title-box scaled">
 						<TextbookTooltip id="temperature"
-							><div class="title-text">Scaled logits</div></TextbookTooltip
+							><div class="title-text">Scaled logits (معيارية)</div></TextbookTooltip
 						>
 					</div>
 					<div class="title-box sampling">
 						<TextbookTooltip id="sampling"
 							><div class="title-text">
-								{$sampling.type === 'top-k' ? 'Top-k' : 'Softmax & Top-p'}
+								{$sampling.type === 'top-k' ? 'Top-k (أعلى ك)' : 'Softmax & Top-p'}
 							</div></TextbookTooltip
 						>
 					</div>
 					<div class="title-box probability">
 						<div class="title-text mr-1">
-							{$sampling.type === 'top-k' ? 'Softmax' : 'Normalization'}
+							{$sampling.type === 'top-k' ? 'Softmax' : 'Normalization (تطبيع)'}
 						</div>
 					</div>
 				</div>

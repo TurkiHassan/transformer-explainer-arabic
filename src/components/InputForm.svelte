@@ -147,7 +147,7 @@
 				class:selectDisabled
 				class="select-button inline-flex shrink-0 items-center justify-center border border-s-0 border-gray-200 bg-white px-3 py-2 text-center text-xs font-medium text-gray-900 first:rounded-s-lg first:border-s last:rounded-e-lg"
 			>
-				Examples<ChevronDownOutline class="pointer-events-none h-4 w-4 text-gray-500" />
+				أمثلة (Examples)<ChevronDownOutline class="pointer-events-none h-4 w-4 text-gray-500" />
 			</button>
 			<Dropdown bind:open={dropdownOpen} class="example-dropdown">
 				{#each inputTextExample as text, index}
@@ -180,7 +180,7 @@
 						bind:this={inputRef}
 						contenteditable={!disabled}
 						class="text-box"
-						placeholder="Test your own input text"
+						placeholder="جرّب نص إدخال من عندك (Test input)"
 						on:focus={onFocusInput}
 						on:input={onInput}
 						on:keydown={handleKeyDown}
@@ -212,28 +212,28 @@
 				{/if}
 				{#if $isMobile}
 					<span class="helper-text"
-						>Try the examples. Please use a desktop computer to input GPT-2 prompts directly.</span
+						>جرّب الأمثلة. يُرجى استخدام متصفح الحاسوب لإدخال النصوص مباشرة.</span
 					>
 				{:else if $isLoaded && $isFetchingModel}
 					<span class="helper-text"
-						>Try the examples while GPT-2 model is being downloaded (600MB)</span
+						>جرّب الأمثلة ريثما يتم تنزيل نموذج GPT-2 محلياً (600MB)</span
 					>
 				{:else if exceedLimit}
-					<span class="helper-text">You can enter up to {wordLimit} words.</span>
+					<span class="helper-text">الحد الأقصى للإدخال هو {wordLimit} كلمة.</span>
 				{/if}
 			</div>
 		</ButtonGroup>
 		<button
 			data-click="generate-btn"
 			disabled={disabled || exceedLimit || exceedLimit}
-			class={classNames('generate-button rounded-lg text-center text-sm shadow-sm', {
+			class={classNames('generate-button rounded-lg text-center text-sm shadow-sm font-medium', {
 				disabled: disabled || exceedLimit,
 				active: !(disabled || exceedLimit)
 			})}
 			type="submit"
 			on:click={handleSubmit}
 		>
-			Generate
+			توليد (Generate)
 		</button>
 	</form>
 	<div class="parameters" data-click="input-parameters">

@@ -13,8 +13,9 @@
 </script>
 
 <div class="top-bar flex w-full items-center gap-4 px-10 py-2 pb-3" class:active={isActive}>
-	<div class="logo text-bold text-gray-700" data-click="logo">
-		T<span class="small">RANSFORMER</span> E<span class="small">XPLAINER</span>
+	<div class="logo text-bold text-gray-700 flex items-center gap-2" data-click="logo">
+		<div>T<span class="small">RANSFORMER</span> E<span class="small">XPLAINER</span></div>
+		<span class="text-xs bg-purple-100 text-purple-700 font-sans px-2 py-0.5 rounded-full font-medium tracking-normal select-none">بالعربية</span>
 	</div>
 	<div class="inputs flex grow items-center">
 		<div class="input-wrapper w-full" class:active={isActive}>

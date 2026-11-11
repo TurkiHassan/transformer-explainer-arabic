@@ -353,7 +353,7 @@
 				{showTooltip}
 			/>
 			<TextbookTooltip id="masked-self-attention">
-				<div class="matrix-label">Dot product</div>
+				<div class="matrix-label">Dot product (الضرب النقطي)</div>
 			</TextbookTooltip>
 
 			<Tooltip class="popover tooltip">
@@ -419,7 +419,7 @@
 				/>
 			</div>
 			<TextbookTooltip id="masked-self-attention">
-				<div class="matrix-label">Scaling · Mask</div>
+				<div class="matrix-label">Scaling · Mask (التحجيم والقناع)</div>
 			</TextbookTooltip>
 
 			<Tooltip class="popover tooltip">
@@ -488,7 +488,7 @@
 			</div>
 
 			<TextbookTooltip id="masked-self-attention">
-				<div class="matrix-label">Softmax</div>
+				<div class="matrix-label">Softmax (سوفت ماكس)</div>
 			</TextbookTooltip>
 			<Tooltip class="popover tooltip">
 				<Katex math={'\\text{softmax}(\\frac{QK^T}{\\sqrt{d_k}} + M)'}></Katex>
@@ -523,7 +523,7 @@
 			/>
 
 			<div class="matrix-label flex items-center gap-1">
-				Attention <ZoomInOutline></ZoomInOutline>
+				Attention (الانتباه) <ZoomInOutline></ZoomInOutline>
 			</div>
 		</div>
 	</div>

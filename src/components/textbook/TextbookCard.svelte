@@ -253,7 +253,7 @@
 		aria-label="Textbook"
 		style="width: {size.width}px; height: {size.height}px;"
 	>
-		<div class="card-header">
+		<div class="card-header" dir="rtl">
 			<div class="flex w-full items-center justify-between">
 				<h3 class="text-lg font-semibold text-gray-900">
 					{textPages[$textbookCurrentPage].title}
@@ -354,6 +354,8 @@
 		line-height: 1.6;
 		font-size: 0.95rem;
 		cursor: default;
+		direction: rtl;
+		text-align: right;
 	}
 
 	:global(.textbook-content p) {

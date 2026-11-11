@@ -109,6 +109,7 @@
 		height: 100%;
 		width: 100%;
 		min-width: var(--min-screen-width);
+		direction: ltr;
 	}
 
 	header {
@@ -116,6 +117,7 @@
 		width: 100%;
 		position: fixed;
 		z-index: $TOP_BAR_INDEX;
+		direction: ltr;
 	}
 	main {
 		position: relative;
@@ -124,8 +126,11 @@
 		display: flex;
 		justify-content: start;
 		overflow: hidden;
+		direction: ltr;
 	}
 	.article {
 		padding-top: 2rem;
+		direction: rtl;
+		text-align: right;
 	}
 </style>

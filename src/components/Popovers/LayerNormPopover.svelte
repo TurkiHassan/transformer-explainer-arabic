@@ -11,7 +11,7 @@
 
 <CommonPopover
 	className="ln-popover"
-	title="Layer Normalization"
+	title="Layer Normalization (تطبيع الطبقة)"
 	{offset}
 	{triggeredBy}
 	{trigger}
@@ -19,7 +19,7 @@
 	goTo="article-ln"
 >
 	<div class="ln-content">
-		Normalizes layer input to have a standard distribution for stability.
+		تطبيع مدخلات الطبقة لتوزيع معياري لتحقيق الاستقرار الرياضي وتسريع التعلم.
 	</div></CommonPopover
 >
 
